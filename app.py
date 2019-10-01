@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 import os
 
-host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/Playlistr')
+host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/playlistr')
 client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.Playlistr
 playlists = db.playlists
