@@ -3,10 +3,14 @@
 {% block content %}
 <h1>Playlists</h1>
 
-<a href='/playlists/new'>New Playlist</a>
-
-{% for playlist in playlists %}
-    <h2><a href='/playlists/{{ playlist._id }}'>{{ playlist.title }}</a></h2>
-    <small>{{ playlist.description }}</small>
-{% endfor %}
+<div class='card-group'>
+    <div class="card">
+    {% for playlist in playlists %}
+        <div class='card-body'>
+            <h2><a href='/playlists/{{ playlist._id }}'>{{ playlist.title }}</a></h2>
+            <small>{{ playlist.description }}</small>
+        </div>
+    {% endfor %}
+    </div>
+</div>
 {% endblock %}
